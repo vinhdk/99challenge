@@ -1,10 +1,11 @@
 /// <reference types='vitest' />
-import { defineConfig } from 'vite';
+import { defineConfig, UserConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import { nxCopyAssetsPlugin } from '@nx/vite/plugins/nx-copy-assets.plugin';
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
+  base: mode === 'production' ? '/99challenge/' : '/',
   root: __dirname,
   cacheDir: './node_modules/.vite/99challenge',
   server: {
@@ -39,4 +40,4 @@ export default defineConfig({
       provider: 'v8',
     },
   },
-});
+} as UserConfig));

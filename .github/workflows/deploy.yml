@@ -26,7 +26,7 @@ jobs:
 
       # Build the project
       - name: Build project
-        run: PUBLIC_URL=/99challenge/ npx nx build
+        run: npx nx build
 
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
