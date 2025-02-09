@@ -96,8 +96,6 @@ const WalletPage: React.FC<Props> = (props: Props) => {
 ### Answer:
 
 ```tsx
-import ex = CSS.ex;
-
 interface WalletBalance {
     currency: string;
     amount: number;
