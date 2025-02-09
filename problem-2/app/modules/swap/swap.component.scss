@@ -1,0 +1,35 @@
+.swap {
+  @apply flex flex-col items-center justify-center gap-4 px-4 py-16 rounded-md bg-branding-background-900 overflow-y-auto;
+  width: calc(min(480px, 100vw) - 32px);
+  height: max-content;
+  max-height: 100%;
+  box-shadow: 0 0 10px 10px var(--sao-palette-color-branding-background-700);
+
+  > header {
+    @apply w-full flex items-center justify-center;
+
+    > h6 {
+      @apply text-h6 text-branding-foreground-50 font-bold;
+    }
+  }
+
+  > main {
+    @apply flex flex-col items-center gap-4;
+
+    > i {
+      --sao-icon-size: 32px;
+    }
+  }
+
+  > footer {
+    @apply flex flex-col items-center justify-center gap-4 w-full;
+
+    > pre {
+      @apply text-b3 text-branding-foreground-50 font-bold;
+    }
+
+    > ul {
+      @apply list-none flex gap-3 items-center;
+    }
+  }
+}
